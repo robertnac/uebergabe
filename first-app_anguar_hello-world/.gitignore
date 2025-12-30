@@ -52,3 +52,5 @@ Thumbs.db
 # Build files
 *.js.map
 *.css.map
+
+package-lock.json
