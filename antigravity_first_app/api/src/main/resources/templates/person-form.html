@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Person Erfassen</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Person Daten</h1>
+        <form action="#" th:action="@{/person}" th:object="${person}" method="post">
+            <label>Name:</label>
+            <input type="text" th:field="*{name}" placeholder="Name" required />
+            <label>Geburtsdatum:</label>
+            <input type="date" th:field="*{birthDate}" required />
+            <button type="submit">Speichern</button>
+        </form>
+        <div style="margin-top: 1rem;">
+            <a href="/persons" style="text-decoration: none; color: #007bff;">Alle Personen anzeigen</a>
+        </div>
+    </div>
+</body>
+
+</html>
