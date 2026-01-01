@@ -70,13 +70,15 @@
         <table th:if="${not #lists.isEmpty(persons)}">
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
                     <th>Geburtsdatum</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="p : ${persons}">
-                    <td th:text="${p.name}"></td>
+                    <td th:text="${p.vorname}"></td>
+                    <td th:text="${p.nachname}"></td>
                     <td th:text="${p.birthDate}"></td>
                 </tr>
             </tbody>

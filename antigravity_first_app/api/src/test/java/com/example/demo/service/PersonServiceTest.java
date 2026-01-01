@@ -28,7 +28,8 @@ public class PersonServiceTest {
     @Test
     public void testSavePerson() throws IOException {
         Person person = new Person();
-        person.setName("Jane Doe");
+        person.setVorname("Jane");
+        person.setNachname("Doe");
         person.setBirthDate(LocalDate.of(1995, 5, 15));
 
         personService.savePerson(person);
@@ -37,7 +38,8 @@ public class PersonServiceTest {
         assertTrue(file.exists());
 
         String content = Files.readString(file.toPath());
-        assertTrue(content.contains("\"name\":\"Jane Doe\""));
+        assertTrue(content.contains("\"vorname\":\"Jane\""));
+        assertTrue(content.contains("\"nachname\":\"Doe\""));
         assertTrue(content.contains("\"birthDate\":\"1995-05-15\""));
         assertTrue(personService.getAllPersons().size() == 1);
     }
@@ -45,7 +47,7 @@ public class PersonServiceTest {
     @Test
     public void testLoadPersons() throws IOException {
         // Create a dummy JSON file
-        String content = "[{\"name\":\"Alice\",\"birthDate\":\"1980-10-10\"},{\"name\":\"Bob\",\"birthDate\":\"1990-12-12\"}]";
+        String content = "[{\"vorname\":\"Alice\",\"nachname\":\"\",\"birthDate\":\"1980-10-10\"},{\"vorname\":\"Bob\",\"nachname\":\"\",\"birthDate\":\"1990-12-12\"}]";
         Files.writeString(new File(FILE_PATH).toPath(), content);
 
         personService.init(); // Trigger load
@@ -53,8 +55,8 @@ public class PersonServiceTest {
         List<Person> loaded = personService.getAllPersons();
         assertTrue(loaded.size() >= 2);
         assertTrue(loaded.stream()
-                .anyMatch(p -> p.getName().equals("Alice") && p.getBirthDate().toString().equals("1980-10-10")));
+                .anyMatch(p -> p.getVorname().equals("Alice") && p.getBirthDate().toString().equals("1980-10-10")));
         assertTrue(loaded.stream()
-                .anyMatch(p -> p.getName().equals("Bob") && p.getBirthDate().toString().equals("1990-12-12")));
+                .anyMatch(p -> p.getVorname().equals("Bob") && p.getBirthDate().toString().equals("1990-12-12")));
     }
 }

@@ -3,15 +3,24 @@ package com.example.demo.model;
 import java.time.LocalDate;
 
 public class Person {
-    private String name;
+    private String vorname;
+    private String nachname;
     private LocalDate birthDate;
 
-    public String getName() {
-        return name;
+    public String getVorname() {
+        return vorname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setVorname(String vorname) {
+        this.vorname = vorname;
+    }
+
+    public String getNachname() {
+        return nachname;
+    }
+
+    public void setNachname(String nachname) {
+        this.nachname = nachname;
     }
 
     public LocalDate getBirthDate() {

@@ -34,7 +34,8 @@ public class PersonControllerTest {
     @Test
     public void testSubmitForm() throws Exception {
         mockMvc.perform(post("/person")
-                .param("name", "John Doe")
+                .param("vorname", "John")
+                .param("nachname", "Doe")
                 .param("birthDate", "1990-01-01"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("person-result"))
