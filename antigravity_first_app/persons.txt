@@ -14,4 +14,8 @@
   "vorname" : "Anja",
   "nachname" : "Wissing",
   "birthDate" : "1968-06-01"
+}, {
+  "vorname" : "Thomas",
+  "nachname" : "Pan",
+  "birthDate" : "1987-06-12"
 } ]
