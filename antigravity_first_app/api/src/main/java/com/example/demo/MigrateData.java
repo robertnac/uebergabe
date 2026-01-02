@@ -28,23 +28,38 @@ public class MigrateData {
                 ArrayNode newRoot = mapper.createArrayNode();
                 for (JsonNode node : root) {
                     ObjectNode person = (ObjectNode) node;
-                    if (person.has("name")) {
-                        String fullName = person.get("name").asText();
+
+                    // Handle legacy "name" field if present
+                    if (person.has("name") && !person.get("name").isNull()) {
+                        String fullName = person.get("name").asText().trim();
                         String vorname = "";
                         String nachname = "";
 
-                        int firstSpace = fullName.indexOf(" ");
-                        if (firstSpace != -1) {
-                            vorname = fullName.substring(0, firstSpace);
-                            nachname = fullName.substring(firstSpace + 1);
+                        int lastSpace = fullName.lastIndexOf(" ");
+                        if (lastSpace != -1) {
+                            vorname = fullName.substring(0, lastSpace).trim();
+                            nachname = fullName.substring(lastSpace + 1).trim();
                         } else {
                             vorname = fullName;
+                            nachname = "XXX";
                         }
 
                         person.remove("name");
                         person.put("vorname", vorname);
                         person.put("nachname", nachname);
                     }
+
+                    // Check existing "nachname" field
+                    if (person.has("nachname")) {
+                        String nachname = person.get("nachname").asText();
+                        if (nachname == null || nachname.trim().isEmpty()) {
+                            person.put("nachname", "XXX");
+                        }
+                    } else if (person.has("vorname")) {
+                        // If it has vorname but no nachname at all
+                        person.put("nachname", "XXX");
+                    }
+
                     newRoot.add(person);
                 }
                 mapper.writeValue(file, newRoot);

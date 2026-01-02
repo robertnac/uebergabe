@@ -1,14 +1,14 @@
 [ {
   "vorname" : "Robert",
-  "nachname" : "",
+  "nachname" : "XXX",
   "birthDate" : "1972-12-18"
 }, {
   "vorname" : "Peter",
-  "nachname" : "",
+  "nachname" : "XXX",
   "birthDate" : "2025-12-31"
 }, {
   "vorname" : "Hans",
-  "nachname" : "",
+  "nachname" : "XXX",
   "birthDate" : "2025-07-28"
 }, {
   "vorname" : "Anja",
