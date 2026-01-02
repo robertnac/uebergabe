@@ -43,6 +43,7 @@
         <h1>Erfasste Person</h1>
         <p th:text="'Vorname: ' + ${person.vorname}" />
         <p th:text="'Nachname: ' + ${person.nachname}" />
+        <p th:text="'Verheiratet: ' + (${person.verheiratet} ? 'Ja' : 'Nein')" />
         <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
             <a href="/">Neuer Eintrag</a>
             <span style="color: #ccc;">|</span>

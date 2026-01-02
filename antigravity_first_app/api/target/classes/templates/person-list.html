@@ -73,6 +73,7 @@
                     <th>Vorname</th>
                     <th>Nachname</th>
                     <th>Geburtsdatum</th>
+                    <th>Verheiratet</th>
                 </tr>
             </thead>
             <tbody>
@@ -80,6 +81,7 @@
                     <td th:text="${p.vorname}"></td>
                     <td th:text="${p.nachname}"></td>
                     <td th:text="${p.birthDate}"></td>
+                    <td th:text="${p.verheiratet ? 'Ja' : 'Nein'}"></td>
                 </tr>
             </tbody>
         </table>

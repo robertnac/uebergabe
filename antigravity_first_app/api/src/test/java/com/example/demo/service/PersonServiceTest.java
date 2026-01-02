@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Person;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -31,6 +33,7 @@ public class PersonServiceTest {
         person.setVorname("Jane");
         person.setNachname("Doe");
         person.setBirthDate(LocalDate.of(1995, 5, 15));
+        person.setVerheiratet(true);
 
         personService.savePerson(person);
 
@@ -38,9 +41,17 @@ public class PersonServiceTest {
         assertTrue(file.exists());
 
         String content = Files.readString(file.toPath());
-        assertTrue(content.contains("\"vorname\":\"Jane\""));
-        assertTrue(content.contains("\"nachname\":\"Doe\""));
-        assertTrue(content.contains("\"birthDate\":\"1995-05-15\""));
+        ObjectMapper mapper = new ObjectMapper().registerModule(new JavaTimeModule());
+        List<Person> savedPersons = mapper.readValue(content,
+                new com.fasterxml.jackson.core.type.TypeReference<List<Person>>() {
+                });
+
+        assertTrue(savedPersons.size() == 1);
+        Person savedPerson = savedPersons.get(0);
+        assertTrue(savedPerson.getVorname().equals("Jane"));
+        assertTrue(savedPerson.getNachname().equals("Doe"));
+        assertTrue(savedPerson.getBirthDate().equals(LocalDate.of(1995, 5, 15)));
+        assertTrue(savedPerson.isVerheiratet());
         assertTrue(personService.getAllPersons().size() == 1);
     }
 

@@ -64,6 +64,10 @@
             <input type="text" th:field="*{nachname}" placeholder="Nachname" required />
             <label>Geburtsdatum:</label>
             <input type="date" th:field="*{birthDate}" required />
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <input type="checkbox" th:field="*{verheiratet}" id="verheiratet" />
+                <label for="verheiratet">Verheiratet</label>
+            </div>
             <button type="submit">Speichern</button>
         </form>
         <div style="margin-top: 1rem;">

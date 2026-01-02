@@ -6,6 +6,7 @@ public class Person {
     private String vorname;
     private String nachname;
     private LocalDate birthDate;
+    private boolean verheiratet;
 
     public String getVorname() {
         return vorname;
@@ -30,4 +31,13 @@ public class Person {
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
+
+    public boolean isVerheiratet() {
+        return verheiratet;
+    }
+
+    public void setVerheiratet(boolean verheiratet) {
+        this.verheiratet = verheiratet;
+    }
+
 }
