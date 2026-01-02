@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>Person Management (Angular 19)</h1>
+
+    <section class="form-section">
+        <h2>Neue Person erfassen</h2>
+        <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+            <div class="form-group">
+                <label for="vorname">Vorname:</label>
+                <input type="text" id="vorname" name="vorname" [(ngModel)]="newPerson.vorname" required>
+            </div>
+            <div class="form-group">
+                <label for="nachname">Nachname:</label>
+                <input type="text" id="nachname" name="nachname" [(ngModel)]="newPerson.nachname" required>
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Geburtsdatum:</label>
+                <input type="date" id="birthDate" name="birthDate" [(ngModel)]="newPerson.birthDate" required>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="verheiratet" name="verheiratet" [(ngModel)]="newPerson.verheiratet">
+                <label for="verheiratet">Verheiratet</label>
+            </div>
+            <button type="submit" [disabled]="!personForm.form.valid">Speichern</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section class="list-section">
+        <h2>Alle Personen</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                    <th>Geburtsdatum</th>
+                    <th>Verheiratet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of persons">
+                    <td>{{ p.vorname }}</td>
+                    <td>{{ p.nachname }}</td>
+                    <td>{{ p.birthDate }}</td>
+                    <td>{{ p.verheiratet ? 'Ja' : 'Nein' }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p *ngIf="persons.length === 0">Keine Personen gefunden.</p>
+    </section>
+</div>
