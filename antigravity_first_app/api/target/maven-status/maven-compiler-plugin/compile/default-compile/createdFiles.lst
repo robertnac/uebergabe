@@ -1,0 +1,7 @@
+com\example\demo\controller\PersonApiController.class
+com\example\demo\DemoApplication.class
+com\example\demo\MigrateData.class
+com\example\demo\service\PersonService$1.class
+com\example\demo\controller\PersonController.class
+com\example\demo\model\Person.class
+com\example\demo\service\PersonService.class
