@@ -1,0 +1,16 @@
+[ {
+  "vorname" : "zjtj",
+  "nachname" : "zjjt",
+  "birthDate" : "1978-12-15",
+  "verheiratet" : true
+}, {
+  "vorname" : "Bob",
+  "nachname" : "Dylan",
+  "birthDate" : "1955-09-14",
+  "verheiratet" : true
+}, {
+  "vorname" : "Bermd",
+  "nachname" : "Solo",
+  "birthDate" : "1987-12-12",
+  "verheiratet" : false
+} ]
