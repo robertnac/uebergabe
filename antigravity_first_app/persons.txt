@@ -1,31 +1,6 @@
 [ {
-  "vorname" : "Robert",
-  "nachname" : "XXX",
-  "birthDate" : "1972-12-18",
+  "vorname" : "Jane",
+  "nachname" : "Doe",
+  "birthDate" : "1995-05-15",
   "verheiratet" : true
-}, {
-  "vorname" : "Peter",
-  "nachname" : "XXX",
-  "birthDate" : "2025-12-31",
-  "verheiratet" : true
-}, {
-  "vorname" : "Hans",
-  "nachname" : "XXX",
-  "birthDate" : "2025-07-28",
-  "verheiratet" : true
-}, {
-  "vorname" : "Anja",
-  "nachname" : "Wissing",
-  "birthDate" : "1968-06-01",
-  "verheiratet" : true
-}, {
-  "vorname" : "Thomas",
-  "nachname" : "Pan",
-  "birthDate" : "1987-06-12",
-  "verheiratet" : true
-}, {
-  "vorname" : "Sigi",
-  "nachname" : "Bock",
-  "birthDate" : "1966-12-15",
-  "verheiratet" : false
 } ]

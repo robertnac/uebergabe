@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class PersonServiceTest {
 
     private final PersonService personService = new PersonService();
-    private final String FILE_PATH = "persons.txt";
+    private final String FILE_PATH = "src/main/resources/persons.txt";
 
     @AfterEach
     public void cleanup() {
