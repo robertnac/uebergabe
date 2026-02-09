@@ -1,0 +1,1 @@
+Nach dem Start der Anwendung ( ng serve ) ist die Anwendung über http://localhost:4200/ erreichbar.

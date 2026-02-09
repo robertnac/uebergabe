@@ -1,0 +1,1 @@
+Nach Start der API-Anwendung, ist diese unter http://localhost:8080/ erreichbar.
