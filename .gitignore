@@ -3,5 +3,6 @@ antigravity_first_app/api/target/surefire-reports/TEST-com.example.demo.controll
 /antigravity_first_app/api/target
 antigravity_first_app/api/target/classes/com/example/demo/MigrateData.class
 *.class
+*/target/
 **/target/
 
