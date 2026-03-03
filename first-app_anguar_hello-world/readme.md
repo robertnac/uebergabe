@@ -7,4 +7,4 @@ URL: http://localhost:4200/
 
 Code: https://github.com/angular/codelabs/tree/homes-app-start
 
-YT Fortschritt: https://www.youtube.com/watch?v=R0nRX8jD2D0
+YT Fortschritt: https://www.youtube.com/watch?v=eM3zi_n7lNs
