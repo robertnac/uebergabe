@@ -3,4 +3,5 @@ export interface Person {
     nachname: string;
     birthDate: string;
     verheiratet: boolean;
+    hautfarbe: string;
 }

@@ -17,7 +17,8 @@ export class AppComponent implements OnInit {
     vorname: '',
     nachname: '',
     birthDate: '',
-    verheiratet: false
+    verheiratet: false,
+    hautfarbe: ''
   };
 
   constructor(private personService: PersonService) { }
@@ -39,7 +40,8 @@ export class AppComponent implements OnInit {
         vorname: '',
         nachname: '',
         birthDate: '',
-        verheiratet: false
+        verheiratet: false,
+        hautfarbe: ''
       };
     });
   }

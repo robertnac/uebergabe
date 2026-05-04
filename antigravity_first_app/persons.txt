@@ -2,15 +2,24 @@
   "vorname" : "Jane",
   "nachname" : "Doe",
   "birthDate" : "1995-05-15",
-  "verheiratet" : true
+  "verheiratet" : true,
+  "hautfarbe" : null
 }, {
   "vorname" : "Tom",
   "nachname" : "Beinlich",
   "birthDate" : "1975-02-18",
-  "verheiratet" : true
+  "verheiratet" : true,
+  "hautfarbe" : null
 }, {
   "vorname" : "Cliff",
   "nachname" : "Richards",
   "birthDate" : "1957-01-25",
-  "verheiratet" : true
+  "verheiratet" : true,
+  "hautfarbe" : null
+}, {
+  "vorname" : "Michael",
+  "nachname" : "Jordan",
+  "birthDate" : "1965-12-15",
+  "verheiratet" : true,
+  "hautfarbe" : "schwarz"
 } ]

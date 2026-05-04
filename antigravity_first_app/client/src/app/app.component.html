@@ -20,6 +20,10 @@
                 <input type="checkbox" id="verheiratet" name="verheiratet" [(ngModel)]="newPerson.verheiratet">
                 <label for="verheiratet">Verheiratet</label>
             </div>
+            <div class="form-group">
+                <label for="hautfarbe">Hautfarbe:</label>
+                <input type="text" id="hautfarbe" name="hautfarbe" [(ngModel)]="newPerson.hautfarbe">
+            </div>
             <button type="submit" [disabled]="!personForm.form.valid">Speichern</button>
         </form>
     </section>
@@ -35,6 +39,7 @@
                     <th>Nachname</th>
                     <th>Geburtsdatum</th>
                     <th>Verheiratet</th>
+                    <th>Hautfarbe</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +48,7 @@
                     <td>{{ p.nachname }}</td>
                     <td>{{ p.birthDate }}</td>
                     <td>{{ p.verheiratet ? 'Ja' : 'Nein' }}</td>
+                    <td>{{ p.hautfarbe }}</td>
                 </tr>
             </tbody>
         </table>

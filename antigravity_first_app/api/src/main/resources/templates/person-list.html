@@ -74,6 +74,7 @@
                     <th>Nachname</th>
                     <th>Geburtsdatum</th>
                     <th>Verheiratet</th>
+                    <th>Hautfarbe</th>
                 </tr>
             </thead>
             <tbody>
@@ -82,6 +83,7 @@
                     <td th:text="${p.nachname}"></td>
                     <td th:text="${p.birthDate}"></td>
                     <td th:text="${p.verheiratet ? 'Ja' : 'Nein'}"></td>
+                    <td th:text="${p.hautfarbe}"></td>
                 </tr>
             </tbody>
         </table>

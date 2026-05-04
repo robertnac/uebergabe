@@ -1,0 +1,6 @@
+[ {
+  "vorname" : "Jane",
+  "nachname" : "Doe",
+  "birthDate" : "1995-05-15",
+  "verheiratet" : true
+} ]

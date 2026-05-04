@@ -7,6 +7,7 @@ public class Person {
     private String nachname;
     private LocalDate birthDate;
     private boolean verheiratet;
+    private String hautfarbe;
 
     public String getVorname() {
         return vorname;
@@ -38,6 +39,14 @@ public class Person {
 
     public void setVerheiratet(boolean verheiratet) {
         this.verheiratet = verheiratet;
+    }
+
+    public String getHautfarbe() {
+        return hautfarbe;
+    }
+
+    public void setHautfarbe(String hautfarbe) {
+        this.hautfarbe = hautfarbe;
     }
 
 }
