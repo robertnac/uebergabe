@@ -3,4 +3,14 @@
   "nachname" : "Doe",
   "birthDate" : "1995-05-15",
   "verheiratet" : true
+}, {
+  "vorname" : "Tom",
+  "nachname" : "Beinlich",
+  "birthDate" : "1975-02-18",
+  "verheiratet" : true
+}, {
+  "vorname" : "Cliff",
+  "nachname" : "Richards",
+  "birthDate" : "1957-01-25",
+  "verheiratet" : true
 } ]
